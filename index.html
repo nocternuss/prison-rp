@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resmi Oyun Kuralları | Prison RP Türkiye</title>
+  <meta name="description" content="Şüpheli kademeleri, güncel suç cetveli, sivil/sağlık/güvenlik rolleri, müdür yetkileri, nöbet esasları ve cezaevi disiplin yönetmeliği.">
+  <meta name="theme-color" content="#E30A17">
+
+  <!-- Open Graph / Discord Embed -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Prison RP Türkiye">
+  <meta property="og:title" content="Resmi Oyun Kuralları | Prison RP Türkiye">
+  <meta property="og:description" content="Şüpheli kademeleri, güncel suç cetveli, sivil/sağlık/güvenlik rolleri, müdür yetkileri, nöbet esasları ve cezaevi disiplin yönetmeliği.">
+  <meta property="og:url" content="https://nocternuss.github.io/prison-rp/">
+  <meta property="og:image" content="https://nocternuss.github.io/prison-rp/assets/banner-kurallar.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Resmi Oyun Kuralları | Prison RP Türkiye">
+  <meta name="twitter:description" content="Şüpheli kademeleri, güncel suç cetveli, sivil/sağlık/güvenlik rolleri, müdür yetkileri, nöbet esasları ve cezaevi disiplin yönetmeliği.">
+  <meta name="twitter:image" content="https://nocternuss.github.io/prison-rp/assets/banner-kurallar.png">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="./assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --bg-page: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8fafc;
+      --bg-header: rgba(255, 255, 255, 0.92);
+      --border-hairline: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #475569;
+      --accent: #991b1b;
+      --accent-bright: #E30A17;
+      --accent-soft: #fff1f2;
+      --accent-border: #fca5a5;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 10px 28px rgba(15, 23, 42, 0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+    body.drawer-locked { overflow: hidden; }
+    .search-hidden { display: none !important; }
+
+    /* TOP BAR */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: 60px;
+      background: var(--bg-header);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+    .topbar-inner {
+      max-width: 1320px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+    .menu-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .menu-btn:hover { border-color: var(--accent-bright); }
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+    .brand-country { display: none; }
+    @media (min-width: 520px) {
+      .brand-link { font-size: 0.95rem; gap: 9px; }
+      .brand-country { display: inline; }
+    }
+    .brand-link svg {
+      flex-shrink: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .nav-switcher {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-hairline);
+      border-radius: 9px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .nav-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 9px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+    @media (min-width: 640px) { .nav-tab { padding: 6px 11px; font-size: 0.8125rem; } }
+    .nav-tab:hover { color: var(--text-primary); }
+    .nav-tab.is-active {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    .nav-tab svg { display: none; }
+    @media (min-width: 640px) { .nav-tab svg { display: inline-block; } }
+
+    .pdf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+    @media (min-width: 520px) { .pdf-btn { padding: 7px 11px; } }
+    .pdf-btn:hover {
+      border-color: var(--accent-bright);
+      background: var(--accent-soft);
+    }
+    .pdf-label { display: none; }
+    @media (min-width: 720px) { .pdf-label { display: inline; } }
+
+    /* SHELL GRID */
+    .shell {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 20px 16px 56px 16px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    @media (min-width: 960px) {
+      .topbar-inner { padding: 0 24px; }
+      .menu-btn { display: none; }
+      .shell {
+        padding: 28px 24px 72px 24px;
+        grid-template-columns: 288px minmax(0, 1fr);
+        gap: 36px;
+      }
+    }
+
+    /* SIDEBAR & MOBILE DRAWER */
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(2px);
+      z-index: 55;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .drawer-backdrop.is-open { opacity: 1; pointer-events: auto; }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: min(310px, 86vw);
+      background: var(--bg-surface);
+      border-right: 1px solid var(--border-hairline);
+      z-index: 60;
+      padding: 16px;
+      overflow-y: auto;
+      transform: translateX(-105%);
+      transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .sidebar.is-open { transform: translateX(0); }
+    @media (min-width: 960px) {
+      .sidebar {
+        position: sticky;
+        top: 84px;
+        bottom: auto;
+        width: auto;
+        max-height: calc(100vh - 104px);
+        transform: none;
+        background: transparent;
+        border-right: none;
+        padding: 0;
+        z-index: 10;
+      }
+    }
+
+    .drawer-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+    @media (min-width: 960px) { .drawer-head { display: none; } }
+    .drawer-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+    .drawer-close {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .side-group-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      padding-left: 8px;
+    }
+    .toc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-left: 2px solid transparent;
+      transition: background-color 0.14s ease, color 0.14s ease, border-color 0.14s ease;
+    }
+    .toc-link:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-primary);
+    }
+    .toc-link.is-active {
+      background: var(--accent-soft);
+      color: #991b1b;
+      border-left-color: var(--accent-bright);
+      font-weight: 600;
+    }
+    .toc-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-hairline);
+      color: var(--text-muted);
+      flex-shrink: 0;
+      letter-spacing: 0.03em;
+    }
+    .toc-link.is-active .toc-tag {
+      border-color: var(--accent-border);
+      color: #991b1b;
+    }
+    .toc-text {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .side-cross-card {
+      margin-top: 8px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-hairline);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .side-cross-card p {
+      margin: 0;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      color: var(--text-muted);
+    }
+    .side-cross-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      font-size: 0.825rem;
+      font-weight: 700;
+      color: #991b1b;
+    }
+    .side-cross-link:hover { text-decoration: underline; }
+
+    /* MAIN READING CANVAS */
+    .main-col {
+      min-width: 0;
+      max-width: 880px;
+    }
+
+    .doc-hero {
+      background: var(--bg-card);
+      border: 1px solid var(--border-hairline);
+      border-top: 4px solid var(--accent-bright);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    @media (min-width: 640px) { .doc-hero { padding: 26px 28px; } }
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+    .hero-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid var(--border-strong);
+      flex-shrink: 0;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #991b1b;
+      margin-bottom: 6px;
+    }
+    .doc-hero h1 {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+    .hero-lead {
+      margin: 12px 0 16px 0;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hero-chip {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: var(--bg-page);
+      border: 1px solid var(--border-hairline);
+      color: var(--text-secondary);
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+    .hero-chip:hover {
+      border-color: var(--accent-bright);
+      color: var(--text-primary);
+    }
+
+    /* SEARCH BAR */
+    .search-bar-wrap {
+      margin-bottom: 24px;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 10px;
+      padding: 8px 12px;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .search-box:focus-within {
+      border-color: var(--accent-bright);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+    .search-icon {
+      color: var(--text-muted);
+      display: inline-flex;
+      flex-shrink: 0;
+    }
+    .search-input {
+      flex: 1;
+      min-width: 0;
+      border: none;
+      background: transparent;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.925rem;
+      outline: none;
+    }
+    .search-input::placeholder { color: var(--text-muted); }
+    .search-status {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .search-clear {
+      border: 1px solid var(--border-hairline);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .search-kbd {
+      display: none;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border: 1px solid var(--border-hairline);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+    @media (min-width: 960px) { .search-kbd { display: inline-block; } }
+
+    .search-empty {
+      background: var(--bg-card);
+      border: 1px dashed var(--border-strong);
+      border-radius: 12px;
+      padding: 36px 20px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .search-empty p {
+      margin: 0 0 12px 0;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    .reset-btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--accent-border);
+      background: var(--accent-soft);
+      color: #991b1b;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    /* SECTIONS */
+    .doc-section {
+      scroll-margin-top: 76px;
+      margin-bottom: 36px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+    .doc-section:last-of-type { border-bottom: none; }
+    .sec-head {
+      margin-bottom: 18px;
+    }
+    .sec-eyebrow {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #991b1b;
+      margin-bottom: 4px;
+    }
+    .sec-head h2 {
+      margin: 0 0 6px 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.2rem, 2vw, 1.45rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+    }
+    .sec-desc {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* === RULES PORTAL CONTENT STYLES === */
+    .modern-card {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-hairline);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+      font-size: 0.9375rem;
+      line-height: 1.62;
+      color: var(--text-secondary);
+      box-shadow: var(--shadow-sm);
+    }
+    .modern-card strong { color: var(--text-primary); }
+    .modern-card ul { margin: 8px 0 0 18px; padding: 0; }
+    .modern-card ul li { margin-bottom: 7px; }
+    .modern-card ul li:last-child { margin-bottom: 0; }
+
+    .card-border-crimson { border-left: 4px solid #991b1b; background: #fffafa; }
+    .card-border-emerald { border-left: 4px solid #059669; background: #f0fdf4; color: #14532d; }
+    .card-border-blue { border-left: 4px solid #2563eb; background: #eff6ff; color: #1e3a8a; }
+    .card-border-amber { border-left: 4px solid #d97706; background: #fefce8; color: #713f12; }
+    .card-border-slate { border-left: 4px solid #475569; background: #f8fafc; color: #1e293b; }
+
+    .card-header-badge {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      color: #0f172a;
+    }
+    .badge-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 5px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .tag-crimson { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+    .tag-emerald { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .tag-blue { background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; }
+    .tag-amber { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .tag-dark { background: #0f172a; color: #ffffff; }
+
+    .item-list { display: flex; flex-direction: column; gap: 9px; margin-top: 8px; }
+    .list-row { display: block; font-size: 0.9375rem; line-height: 1.58; }
+    .bullet-dot { color: #991b1b; font-weight: 900; margin-right: 6px; }
+    .row-title { font-weight: 700; color: #0f172a; margin-right: 5px; }
+    .row-text { color: #334155; }
+    .red-pill {
+      color: #991b1b;
+      font-weight: 700;
+      background: #fee2e2;
+      padding: 1px 7px;
+      border-radius: 4px;
+      display: inline-block;
+      border: 1px solid #fca5a5;
+      font-size: 0.85em;
+    }
+
+    .tools-grid, .roles-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 12px 0 16px 0;
+    }
+    @media (min-width: 700px) {
+      .tools-grid, .roles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    .tool-card, .role-box {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .tool-title, .role-box-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #0f172a;
+    }
+    .tool-desc, .role-text {
+      font-size: 0.875rem;
+      color: #334155;
+      line-height: 1.55;
+    }
+    .role-name { font-family: 'Montserrat', sans-serif; font-size: 0.98rem; font-weight: 800; color: #0f172a; }
+    .role-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #991b1b;
+      background: #fee2e2;
+      padding: 2px 8px;
+      border-radius: 5px;
+      border: 1px solid #fca5a5;
+      white-space: nowrap;
+    }
+
+    /* RESPONSIVE TABLES */
+    .table-wrap {
+      margin: 14px 0 16px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+    .table-official {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .table-official th {
+      background: #0f172a;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-align: left;
+      padding: 11px 14px;
+    }
+    .table-official td {
+      padding: 10px 14px;
+      border-top: 1px solid #cbd5e1;
+      vertical-align: middle;
+      line-height: 1.5;
+    }
+    .row-amber { background: #fefce8; color: #713f12; font-weight: 500; }
+    .row-rose-light { background: #fff1f2; color: #881337; font-weight: 500; }
+    .row-rose-medium { background: #ffe4e6; color: #9f1239; font-weight: 600; }
+    .row-white { background: #ffffff; color: #1e293b; font-weight: 500; }
+
+    @media (max-width: 639px) {
+      .table-wrap { border: none; background: transparent; box-shadow: none; border-radius: 0; }
+      .table-official, .table-official tbody, .table-official tr, .table-official td {
+        display: block;
+        width: 100%;
+      }
+      .table-official thead { display: none; }
+      .table-official tr {
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+      }
+      .table-official td {
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
+        padding: 9px 12px;
+      }
+      .table-official td:first-child { border-top: none; }
+      .table-official td[data-label]::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.68rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #64748b;
+        margin-bottom: 2px;
+      }
+    }
+
+    /* === STAFF PORTAL CONTENT STYLES === */
+    .sub-section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #f87171;
+      background: rgba(204, 0, 0, 0.12);
+      border-left: 3px solid #cc0000;
+      padding: 7px 12px;
+      border-radius: 4px;
+      margin: 0 0 12px 0;
+    }
+    .sub-gap { margin-top: 24px; }
+    .cards-container { display: flex; flex-direction: column; gap: 12px; }
+    .rule-card {
+      background: #15171d;
+      border: 1px solid #262933;
+      border-radius: 10px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+    }
+    .rule-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #ffffff;
+      line-height: 1.35;
+    }
+    .en-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #94a3b8;
+      margin-left: 4px;
+      display: inline-block;
+    }
+    .rule-desc {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      margin: 6px 0 10px 0;
+      line-height: 1.55;
+    }
+    .sanction-list { display: flex; flex-direction: column; gap: 6px; }
+    .sanction-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 4px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .bullet { color: #ef4444; font-weight: 900; margin-right: 4px; }
+    .sanction-label { font-weight: 700; color: #ffffff; }
+    .sanction-text { color: #e2e8f0; }
+    .sanction-tag {
+      color: #ff4d4d;
+      font-weight: 700;
+      font-size: 0.82rem;
+      margin-left: 4px;
+      display: inline-block;
+    }
+    .note-tag {
+      color: #94a3b8;
+      font-size: 0.8rem;
+      margin-left: 4px;
+    }
+
+    .directive-box, .protocol-box, .harmful-box, .notice-card {
+      background: #171920;
+      border: 1px solid #2a2e39;
+      border-left: 4px solid #cc0000;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-top: 16px;
+    }
+    .directive-header, .protocol-header, .harmful-header, .notice-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+    .directive-en, .protocol-en, .harmful-en, .notice-en {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #94a3b8;
+    }
+    .directive-desc, .harmful-desc, .notice-desc {
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      line-height: 1.58;
+    }
+    .directive-desc strong, .harmful-desc strong, .notice-desc strong, .protocol-text strong { color: #ffffff; }
+    .protocol-list { display: flex; flex-direction: column; gap: 8px; }
+    .protocol-item { font-size: 0.88rem; line-height: 1.55; color: #cbd5e1; }
+    .protocol-label { font-weight: 700; color: #ffffff; margin-right: 4px; }
+    .protocol-text { color: #cbd5e1; }
+
+    /* FOOTER & BACK TO TOP */
+    .site-footer {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-hairline);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .site-footer a {
+      color: #991b1b;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .site-footer a:hover { text-decoration: underline; }
+
+    .scroll-top-btn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      box-shadow: var(--shadow-md);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.15s ease;
+      z-index: 40;
+    }
+    .scroll-top-btn.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .scroll-top-btn:hover { border-color: var(--accent-bright); }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-group">
+        <button id="menu-toggle" class="menu-btn" type="button" aria-label="Bölüm menüsünü aç" aria-expanded="false" aria-controls="sidebar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <a href="./" class="brand-link" title="Resmi Oyun Kuralları ve Cezaevi Yönetmeliği">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="28" height="19" role="img" aria-label="Türk Bayrağı"><defs><clipPath id="tr-flag-clip-12-28"><rect x="0" y="0" width="300" height="200" rx="12" ry="12"/></clipPath></defs><g clip-path="url(#tr-flag-clip-12-28)"><rect width="300" height="200" fill="#E30A17"/><circle cx="100" cy="100" r="50" fill="#FFFFFF"/><circle cx="112.5" cy="100" r="40" fill="#E30A17"/><polygon points="143.30,100.00 160.57,105.61 160.57,123.78 171.25,109.08 188.53,114.69 177.85,100.00 188.53,85.31 171.25,90.92 160.57,76.22 160.57,94.39" fill="#FFFFFF"/></g></svg>
+          <span>Prison RP<span class="brand-country"> Türkiye</span></span>
+        </a>
+      </div>
+
+      <div class="nav-actions">
+        <nav class="nav-switcher" aria-label="Belgeler Arası Geçiş">
+          <a href="./" aria-current="page" class="nav-tab is-active"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span>Kurallar</span></a>
+          <a href="./yetkili/" class="nav-tab"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Yetkili</span></a>
+        </nav>
+        <a href="./downloads/Prison_RP_Resmi_Oyun_Kurallari.pdf" class="pdf-btn" download title="PDF olarak indir">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span class="pdf-label">PDF</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+  <div class="shell">
+    <aside id="sidebar" class="sidebar" aria-label="Bölüm Listesi">
+      <div class="drawer-head">
+        <span class="drawer-title">Bölümler</span>
+        <button id="drawer-close" class="drawer-close" type="button" aria-label="Menüyü kapat">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div>
+        <div class="side-group-title">İçindekiler</div>
+        <nav class="toc-list">
+          <a class="toc-link is-active" href="#temel-esaslar"><span class="toc-tag">Giriş</span><span class="toc-text">Temel Esaslar</span></a>
+<a class="toc-link" href="#supheli-ve-suc-cetveli"><span class="toc-tag">Bölüm 1</span><span class="toc-text">Şüpheli &amp; Suç Cetveli</span></a>
+<a class="toc-link" href="#sivil-ve-saglik-rolleri"><span class="toc-tag">Bölüm 2</span><span class="toc-text">Sivil &amp; Sağlık Kadrosu</span></a>
+<a class="toc-link" href="#guvenlik-ve-mudur"><span class="toc-tag">Bölüm 3</span><span class="toc-text">Güvenlik &amp; Müdür</span></a>
+<a class="toc-link" href="#nobet-telsiz-isyan"><span class="toc-tag">Bölüm 4</span><span class="toc-text">Nöbet, Telsiz &amp; İsyan</span></a>
+<a class="toc-link" href="#ihlal-ve-ticket"><span class="toc-tag">Bölüm 5</span><span class="toc-text">Sık İhlaller &amp; Ticket</span></a>
+        </nav>
+      </div>
+
+      <div class="side-cross-card">
+        <div class="side-group-title" style="margin:0;padding:0;">Diğer Belge</div>
+        <p>Yetkili kadrosu için Sözel, RP, Zararlı ve Ticket yaptırım rehberine geçin.</p>
+        <a href="./yetkili/" class="side-cross-link">
+          <span>Yetkili Rehberi</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-col">
+      <section class="doc-hero">
+        <div class="hero-top">
+          <div class="hero-brand">
+            <img src="./assets/logo.png" alt="Prison RP Türkiye Logosu" class="hero-logo" width="56" height="56">
+            <div>
+              <div class="hero-eyebrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="36" height="24" role="img" aria-label="Türk Bayrağı"><defs><clipPath id="tr-flag-clip-14-36"><rect x="0" y="0" width="300" height="200" rx="14" ry="14"/></clipPath></defs><g clip-path="url(#tr-flag-clip-14-36)"><rect width="300" height="200" fill="#E30A17"/><circle cx="100" cy="100" r="50" fill="#FFFFFF"/><circle cx="112.5" cy="100" r="40" fill="#E30A17"/><polygon points="143.30,100.00 160.57,105.61 160.57,123.78 171.25,109.08 188.53,114.69 177.85,100.00 188.53,85.31 171.25,90.92 160.57,76.22 160.57,94.39" fill="#FFFFFF"/></g></svg><span>RESMİ YÖNETMELİK</span></div>
+              <h1>Prison RP Türkiye — Resmi Oyun Kuralları</h1>
+            </div>
+          </div>
+        </div>
+        <p class="hero-lead">Cezaevi düzeni, şüpheli kademeleri, güncel tecrit/wanted süreleri, sivil-sağlık-güvenlik rolleri, nöbet esasları ve destek ticket prosedürleri.</p>
+        <div class="hero-chips">
+          <a class="hero-chip" href="#temel-esaslar">Temel Esaslar</a><a class="hero-chip" href="#supheli-ve-suc-cetveli">Şüpheli &amp; Suç Cetveli</a><a class="hero-chip" href="#sivil-ve-saglik-rolleri">Sivil &amp; Sağlık Kadrosu</a><a class="hero-chip" href="#guvenlik-ve-mudur">Güvenlik &amp; Müdür</a><a class="hero-chip" href="#nobet-telsiz-isyan">Nöbet, Telsiz &amp; İsyan</a><a class="hero-chip" href="#ihlal-ve-ticket">Sık İhlaller &amp; Ticket</a>
+        </div>
+      </section>
+
+      <div class="search-bar-wrap">
+        <div class="search-box">
+          <span class="search-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+          <input id="doc-search" class="search-input" type="search" placeholder="Kural, rol veya suç ara... (Örn: Maske, Taser, Wanted, Müdür, Guard)" autocomplete="off" aria-label="Belge içinde ara">
+          <span id="search-status" class="search-status"></span>
+          <button id="search-clear" class="search-clear" type="button" hidden>Temizle</button>
+          <span class="search-kbd" aria-hidden="true">/</span>
+        </div>
+      </div>
+
+      <div id="search-empty" class="search-empty" hidden>
+        <p>Aramanızla eşleşen madde bulunamadı.</p>
+        <button id="reset-search-btn" class="reset-btn" type="button">Aramayı Sıfırla</button>
+      </div>
+
+      
+      <section class="doc-section" id="temel-esaslar" aria-labelledby="heading-temel-esaslar">
+        <div class="sec-head">
+          <span class="sec-eyebrow">Giriş</span>
+          <h2 id="heading-temel-esaslar">Temel Katılım Esasları &amp; Ceza Rehberi</h2>
+          <p class="sec-desc">Rol yapma felsefesi, iletişim rejimi, çatışma kuralları ve kademeli yaptırım basamakları.</p>
+        </div>
+        <div class="sec-body">
+          <div class="modern-card card-border-crimson">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-crimson">[RESMİ REHBER]</span>
+      Cezaevi Rol Mantığı ve Hiyerarşik Çözüm (Roleplay Dynamics)
+    </div>
+    Prison RP bir cezaevi simülasyonudur. Mahkûmlar ile güvenlik personeli arasındaki gerilimler, koğuş içi anlaşmazlıklar, hücre aramaları ve disiplin cezaları rolün doğal bir parçasıdır. Ufak sürtüşmelerde veya anlık kavgalarda hemen yetkili çağırmak yerine, durumun öncelikle oyun içi amirler (Çavuş, Yüzbaşı, Müdür) vasıtasıyla çözülmesi esastır.
+  </div>
+
+  <div class="modern-card card-border-slate">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-dark">[TEMEL İLKE]</span>
+      Karakter Bütünlüğü, Korku ve Acı Rolü (FearRP & PainRP)
+    </div>
+    Her oyuncu canlandırdığı karakterin fiziksel sınırlarına uymak zorundadır. Silah tehdidi altında, rehin alındığında veya sayıca ezici bir güvenlik gücü karşısında karakterin canını hiçe sayan korkusuz tavırlar sergilemek (NoFear); yaralandığınızda veya darp edildiğinizde acıyı yansıtmayıp hiçbir şey olmamış gibi koşmaya devam etmek (NoPain) kesinlikle kural ihlalidir.
+  </div>
+
+  <div class="modern-card card-border-blue">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-blue">[İLETİŞİM REJİMİ]</span>
+      Rol İçi ve Dışı İletişim Ayrımı (IC / OOC Ayrımı & Metagaming)
+    </div>
+    Oyun içi ses ve sohbet kanalları yalnızca rol için kullanılır; rol ortamında gereksiz OOC konuşmak yasaktır. Discord veya yayınlardan bilgi aktarımı (Metagaming) ağır yaptırıma tabidir. Karşı tarafa mantıksız üstünlük sağlayan, imkânsız eylemleri zorla dayatmak (Powergaming) sunucu düzenine aykırıdır.
+  </div>
+
+  <div class="modern-card card-border-amber">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-amber">[ÇATIŞMA DÜZENİ]</span>
+      Sahne ve Çatışma Bütünlüğü (Combat Logging Yasağı)
+    </div>
+    Aktif bir çatışma, kovalama, gözaltı veya rol sahnesi devam ederken cezadan veya envanter kaybından kaçmak amacıyla oyundan çıkış yapmak (Combat Logging) ağır yaptırıma tabidir. Oyun çökmesi durumunda oyuncunun en geç 5 dakika içinde yetkili ekibine durumu bildirmesi ve sahneye dönmesi mecburidir.
+  </div>
+
+  <div class="modern-card card-border-emerald">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-emerald">[GÜVENLİ BÖLGE]</span>
+      Toplu Güvenlik Alanları (MassRP) ve Revir Dokunulmazlığı
+    </div>
+    Cezaevi avlusu, idari bina, koğuş koridorları ve yemekhane güvenlik kameraları ve potansiyel nöbetçi güçleriyle korunur; ekranda o an gardiyan görünmese dahi uluorta yasa dışı eylem yapılamaz. Cezaevi reviri ve ameliyathane mutlak güvenli bölgedir; revirdeki hastalara veya sağlık çalışanlarına saldırmak kesinlikle yasaktır.
+  </div>
+
+  <div class="tools-grid">
+    <div class="tool-card">
+      <div class="tool-title">SÖZLÜ İKAZ <span class="badge-tag tag-blue">BİLDİRİM</span></div>
+      <div class="tool-desc">Hafif kusurlarda oyuncuyu bilgilendirici ve eğitici ilk ikazdır; sicil kaydına işlenmez.</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-title">RESMİ İHTAR <span class="badge-tag tag-amber">UYARI</span></div>
+      <div class="tool-desc">Kural ihlalinin resmi sicile işlenen ihtarıdır; tekrarlanan ihlallerde yaptırım katlanır.</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-title">SUNUCUDAN ATMA <span class="badge-tag tag-crimson">ATILMA</span></div>
+      <div class="tool-desc">İhlali anında sonlandırmak için sunucudan çıkarılmadır. Oyuncu kurallara uyarak dönebilir.</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-title">UZAKLAŞTIRMA <span class="badge-tag tag-dark">YASAKLAMA</span></div>
+      <div class="tool-desc">Ağır kural ihlallerinde süreli veya kalıcı olarak sunucuya erişimin engellenmesidir.</div>
+    </div>
+  </div>
+        </div>
+      </section>
+
+      <section class="doc-section" id="supheli-ve-suc-cetveli" aria-labelledby="heading-supheli-ve-suc-cetveli">
+        <div class="sec-head">
+          <span class="sec-eyebrow">Bölüm 1</span>
+          <h2 id="heading-supheli-ve-suc-cetveli">1. Şüpheli Kademeleri, Suç Cetveli ve Kamu Cezaları</h2>
+          <p class="sec-desc">Suspect, Wanted ve Hostile prosedür sırası ile güncel tecrit/wanted süreleri.</p>
+        </div>
+        <div class="sec-body">
+          <div class="modern-card card-border-crimson" style="padding: 12px 16px; margin-bottom: 11px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-crimson">[ZORUNLU SIRALAMA]</span>
+      Şüpheli ve Suçlu Kademeleri (Prosedür ve Müdahale Sırası)
+    </div>
+    <div class="item-list" style="gap: 6.5px;">
+      <div class="list-row">
+        <span class="bullet-dot">•</span>
+        <span class="row-title">1. Suspect (Şüpheli):</span>
+        <span class="row-text"><strong>Üstleri kesinlikle aranamaz!</strong> Kişi henüz suçlu değil, şüpheli konumundadır. Gardiyanlar yalnızca şahsa neden suspect durumuna düştüğünü sorabilir; keyfi taser sıkılamaz, kelepçelenemez veya üst araması yapılamaz.</span>
+      </div>
+      <div class="list-row">
+        <span class="bullet-dot">•</span>
+        <span class="row-title">2. Wanted (Aranan):</span>
+        <span class="row-text">Belli bir suçu işlediği tespit edilmiş kişilerdir. <strong>Zorunlu Sıralama:</strong> Şahıs önce Taser ile etkisiz hale getirilir → Kelepçelenir → Üst araması eksiksiz yapılır → Tabletten suçu kontrol edilip tecrite atılır.</span>
+      </div>
+      <div class="list-row">
+        <span class="bullet-dot">•</span>
+        <span class="row-title">3. Hostile (Düşman):</span>
+        <span class="row-text">Doğrudan birini öldürdükleri için bu duruma düşmüşlerdir. Tabletten cinayet sebebi derhal kontrol edilir; üstü baştan aşağı aranarak tüm suç aletlerine el konulur ve derhal azami tecrit cezası verilir.</span>
+      </div>
+    </div>
+  </div>
+
+  <table class="table-official">
+    <thead>
+      <tr>
+        <th style="width: 32%;">SUÇ TANIMI VE EYLEM</th>
+        <th style="width: 28%;">UYGULANACAK TECRİT SÜRESİ</th>
+        <th style="width: 40%;">İŞLEYİŞ VE TAHKİKAT DETAYI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-amber">
+        <td data-label="SUÇ TANIMI VE EYLEM"><strong>Saldırı (Fiziksel / Silahsız)</strong></td>
+        <td data-label="UYGULANACAK TECRİT SÜRESİ"><strong style="color: #991b1b;">3 Dakika Tecrit</strong></td>
+        <td data-label="İŞLEYİŞ VE TAHKİKAT DETAYI">Yumruklaşma ve darp (3 dk Wanted; yakalanınca 3 dk tecrit).</td>
+      </tr>
+      <tr class="row-rose-light">
+        <td data-label="SUÇ TANIMI VE EYLEM"><strong>Saldırı (Üzerinde Alet Bulunması)</strong></td>
+        <td data-label="UYGULANACAK TECRİT SÜRESİ"><strong style="color: #991b1b;">5 Dakika Tecrit</strong></td>
+        <td data-label="İŞLEYİŞ VE TAHKİKAT DETAYI">Kesici/demir aletle saldırı (5 dk Wanted; yakalanınca 5 dk tecrit).</td>
+      </tr>
+      <tr class="row-rose-medium">
+        <td data-label="SUÇ TANIMI VE EYLEM"><strong>Hostile (Cinayet / Kasten Öldürme)</strong></td>
+        <td data-label="UYGULANACAK TECRİT SÜRESİ"><strong style="color: #991b1b;">5 Dakika Tecrit</strong></td>
+        <td data-label="İŞLEYİŞ VE TAHKİKAT DETAYI">Bir oyuncuyu veya personeli kasten öldürme; derhal azami tecrit.</td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="SUÇ TANIMI VE EYLEM"><strong>Maske (Yüz Gizleme)</strong></td>
+        <td data-label="UYGULANACAK TECRİT SÜRESİ"><strong style="color: #991b1b;">2 Dakika Tecrit</strong></td>
+        <td data-label="İŞLEYİŞ VE TAHKİKAT DETAYI">Cezaevi içinde yüzü gizleyen maske veya bandana kullanımı.</td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="SUÇ TANIMI VE EYLEM"><strong>İsyana Katılmak</strong></td>
+        <td data-label="UYGULANACAK TECRİT SÜRESİ"><strong style="color: #991b1b;">2 Dakika Tecrit</strong></td>
+        <td data-label="İŞLEYİŞ VE TAHKİKAT DETAYI">Başlatılan bir isyan eylemine aktif olarak katılma.</td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="SUÇ TANIMI VE EYLEM"><strong>Alan İhlali (Yasaklı Bölge)</strong></td>
+        <td data-label="UYGULANACAK TECRİT SÜRESİ"><strong style="color: #991b1b;">2 Dakika Tecrit</strong></td>
+        <td data-label="İŞLEYİŞ VE TAHKİKAT DETAYI">Roleplay gereği zorunluysa tecrit cezası uygulanmaz.</td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="SUÇ TANIMI VE EYLEM"><strong>Kaçakçılık (Diğerleri)</strong></td>
+        <td data-label="UYGULANACAK TECRİT SÜRESİ"><strong style="color: #991b1b;">2 Dakika Tecrit</strong></td>
+        <td data-label="İŞLEYİŞ VE TAHKİKAT DETAYI">Tornavida, demir alet, ip veya yasaklı envanter bulundurma.</td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="SUÇ TANIMI VE EYLEM"><strong>Uygunsuz Davranış</strong></td>
+        <td data-label="UYGULANACAK TECRİT SÜRESİ"><strong style="color: #991b1b;">1 Dakika Tecrit</strong></td>
+        <td data-label="İŞLEYİŞ VE TAHKİKAT DETAYI">Cezaevi huzurunu ve intizamını bozucu eylemler.</td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="SUÇ TANIMI VE EYLEM"><strong>Tokat Atma (Fiziksel Taciz)</strong></td>
+        <td data-label="UYGULANACAK TECRİT SÜRESİ"><strong style="color: #991b1b;">1 Dakika Tecrit</strong></td>
+        <td data-label="İŞLEYİŞ VE TAHKİKAT DETAYI">Diğer mahkûmlara veya görevliye tokat atma (slap).</td>
+      </tr>
+      <tr class="row-rose-light">
+        <td data-label="SUÇ TANIMI VE EYLEM"><strong>İsyana Teşebbüs ve Toplu Kaçış</strong></td>
+        <td data-label="UYGULANACAK TECRİT SÜRESİ"><strong style="color: #991b1b;">3 Dakika Tecrit</strong></td>
+        <td data-label="İŞLEYİŞ VE TAHKİKAT DETAYI">Güvenlik kapılarını zorlama veya toplu firar girişimi.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="modern-card card-border-blue" style="padding: 11.5px 15px; margin-bottom: 10px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-blue">[İLKEL TAHKİKAT]</span>
+      Tecrit İnfazı ve Tablet Sistemi Denetimi
+    </div>
+    Gardiyanlar tecrit cezası vermeden önce şahsın suç kaydını tablet üzerinden teyit etmek mecburiyetindedir. Tablete bakılmaksızın tahmini ceza kesmek, süreleri keyfi uzatmak veya suçsuz kişileri tecrite göndermek görevi kötüye kullanma sayılır ve görevden ihraç sebebidir.
+  </div>
+
+  <div class="modern-card card-border-amber" style="padding: 11.5px 15px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-amber">[KAMU DİREKTİFİ]</span>
+      Kamu Cezaları ve Amir Takdiri (Community Sanctions)
+    </div>
+    Kamu cezaları, olay yerinde bulunmasına rağmen olaya daha pasif şekilde katılan veya doğrudan olayın içerisinde aktif rol almayan kişilere uygulanır.<br>
+    <strong>Uygulama İlkesi:</strong> Ceza süreleri, işlenen suçun niteliğine, olayın koşullarına ve yetkili amirin rolsel takdirine göre belirlenmelidir. Haksız ve keyfi ceza kesilemez.
+  </div>
+        </div>
+      </section>
+
+      <section class="doc-section" id="sivil-ve-saglik-rolleri" aria-labelledby="heading-sivil-ve-saglik-rolleri">
+        <div class="sec-head">
+          <span class="sec-eyebrow">Bölüm 2</span>
+          <h2 id="heading-sivil-ve-saglik-rolleri">2. Roller ve Cezaevi Hiyerarşisi (Sivil ve Sağlık Kadrosu)</h2>
+          <p class="sec-desc">Prisoner, Janitor, Cook, Nurse, Medic, Surgeon, Teacher ve Psychologist görev sınırları.</p>
+        </div>
+        <div class="sec-body">
+          <div class="modern-card card-border-slate" style="padding: 11.5px 15px; margin-bottom: 10px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-dark">[İSTİHDAM KODU]</span>
+      Sivil ve Hizmet Personeli Genel İstihdam Esasları
+    </div>
+    Cezaevinde istihdam edilen tüm çalışanlar tesis düzeninin ve gündelik işleyişin ayrılmaz bir parçasıdır. Her çalışan kendi görev tanımına uymak, vardiya saatlerini aksatmamak, amirlerin talimatlarını eksiksiz yerine getirmek ve cezaevi güvenliğini sarsacak yasa dışı faaliyetlerden uzak durmakla mükelleftir.
+  </div>
+
+  <div class="roles-grid" style="gap: 10px; margin-bottom: 10px;">
+    <div class="role-box" style="padding: 12px 14px;">
+      <div class="role-box-header">
+        <span class="role-name">Prisoner (Mahkûm)</span>
+        <span class="role-badge">Temel Rol</span>
+      </div>
+      <div class="role-text">
+        Herkesin oyuna başladığı temel roldür. Legal (temizlik, aşçılık vb.) ve illegal (çete işleri, kaçakçılık) para kazanma yolları mevcuttur. Günlük cezaevi programına, müdür ve gardiyanların kurallarına uymak zorundadır.
+      </div>
+    </div>
+
+    <div class="role-box" style="padding: 12px 14px;">
+      <div class="role-box-header">
+        <span class="role-name">Janitor (Temizlikçi)</span>
+        <span class="role-badge">Hizmet Kadrosu</span>
+      </div>
+      <div class="role-text">
+        Çöp torbalarını toplar, dökülenleri temizler ve yerleri paspaslar. Emeği karşılığında para kazanır. Cezaevi genel düzeninde hak ve yükümlülükleri mahkûmlarla tamamen aynı standarttadır.
+      </div>
+    </div>
+
+    <div class="role-box" style="padding: 12px 14px;">
+      <div class="role-box-header">
+        <span class="role-name">Cook (Aşçı)</span>
+        <span class="role-badge">Hizmet Kadrosu</span>
+      </div>
+      <div class="role-text">
+        Yemek saatlerinde (sabah, öğle, akşam) mahkûmlar ve cezaevi çalışanları için mutfakta yemek pişirir ve dağıtır. Emek karşılığı para kazanır; mutfak ve yemekhane düzenini, hijyenini korumakla yükümlüdür.
+      </div>
+    </div>
+
+    <div class="role-box" style="padding: 12px 14px;">
+      <div class="role-box-header">
+        <span class="role-name">Teacher (Öğretmen)</span>
+        <span class="role-badge">Eğitim Birimi</span>
+      </div>
+      <div class="role-text">
+        Günlük cezaevi programındaki eğitim saatinde mahkûmlara derslikte eğitim verir. Mahkûmların genel disiplinini gözetir; doğrudan Cezaevi Müdürünün talimat ve direktiflerine tabidir.
+      </div>
+    </div>
+
+    <div class="role-box" style="padding: 12px 14px;">
+      <div class="role-box-header">
+        <span class="role-name">Nurse (Hemşire)</span>
+        <span class="role-badge">Sağlık: 1. Kademe</span>
+      </div>
+      <div class="role-text">
+        En düşük rütbeli sağlık çalışanıdır. Bayılan mahkûm ve çalışanları sedyeyle hastaneye taşır; yaralıları Bandaj (Bandage) ile sarar. Doktor ve Cerrahın dediklerini yapmakla yükümlüdür.
+      </div>
+    </div>
+
+    <div class="role-box" style="padding: 12px 14px;">
+      <div class="role-box-header">
+        <span class="role-name">Medic (Doktor)</span>
+        <span class="role-badge">Sağlık: 2. Kademe</span>
+      </div>
+      <div class="role-text">
+        Orta rütbeli sağlık çalışanıdır. Hastanede yatan hastaları tedavi etmekle görevlidir. Hemşirelere görev dağıtabilir; Cerrahların talimat ve yönlendirmelerine eksiksiz uymak zorundadır.
+      </div>
+    </div>
+
+    <div class="role-box" style="padding: 12px 14px;">
+      <div class="role-box-header">
+        <span class="role-name">Surgeon (Cerrah)</span>
+        <span class="role-badge">Sağlık: Başhekim</span>
+      </div>
+      <div class="role-text">
+        En yüksek rütbeli sağlık personelidir. Ağır cerrahi vakalara müdahale eder, altındaki tüm sağlık ekibine emir verir. Sağlık departmanının düzeninden doğrudan Cezaevi Müdürüne sorumludur.
+      </div>
+    </div>
+
+    <div class="role-box" style="padding: 12px 14px;">
+      <div class="role-box-header">
+        <span class="role-name">Psychologist (Psikolog)</span>
+        <span class="role-badge">Sağlık: Terapi</span>
+      </div>
+      <div class="role-text">
+        Ruh sağlığı bozulan ve rehabilite olmak isteyen mahkûmlarla hastanedeki özel terapi odasında seans yapar. Mahkûmların psikolojik takibini yürütür ve randevuları aksatmaz.
+      </div>
+    </div>
+  </div>
+
+  <div class="modern-card card-border-blue" style="padding: 11.5px 15px; margin-bottom: 10px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-blue">[TIBBİ REJİM]</span>
+      Sağlık Hizmetleri ve Tıbbi Müdahale Protokolü
+    </div>
+    Sağlık çalışanları mutlak tarafsızlık ilkesiyle hareket eder. Yaralı veya bilinci kapalı olan mahkûm ve güvenlik güçleri aciliyet sırasına göre tedavi edilir. Mahkûmlarla çıkar ilişkisine girip sahte sağlık raporu düzenlemek veya tıbbi envanteri kaçırmak doğrudan görevden ihraç ve ağır ban sebebidir.
+  </div>
+
+  <div class="modern-card card-border-crimson" style="padding: 11.5px 15px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-crimson">[DİSİPLİN KURALI]</span>
+      Sivil ve Sağlık Çalışanları Disiplin Kuralı (Worker Conduct)
+    </div>
+    Hizmet ve sağlık personeli rollerini kötüye kullanarak kaçakçılık yapamaz veya mahkûmlara yetkisiz eşya/ilaç sağlayamaz. Mesai saatlerinde görev yerini izinsiz terk eden personel amirler tarafından derhal işten çıkarılabilir.
+  </div>
+        </div>
+      </section>
+
+      <section class="doc-section" id="guvenlik-ve-mudur" aria-labelledby="heading-guvenlik-ve-mudur">
+        <div class="sec-head">
+          <span class="sec-eyebrow">Bölüm 3</span>
+          <h2 id="heading-guvenlik-ve-mudur">3. Güvenlik Teşkilatı ve Cezaevi Müdürü (Warden)</h2>
+          <p class="sec-desc">Guard, Sergeant, Captain, Bodyguard ve Warden yetki sınırları ve emir-komuta zinciri.</p>
+        </div>
+        <div class="sec-body">
+          <div class="modern-card card-border-slate" style="padding: 11px 15px; margin-bottom: 9px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-dark">[EMİR KOMUTA]</span>
+      Güvenlik Teşkilatı Rütbe Hiyerarşisi ve Emir Komuta Esasları
+    </div>
+    Cezaevinde asayiş ve disiplin katı bir hiyerarşik yapıya dayanır. En üst amir Cezaevi Müdürüdür; ardından Yüzbaşı, Çavuş ve Gardiyanlar gelir. Bodyguardlar yalnızca Müdüre bağlı yakın korumalardır ve personele ya da mahkûmlara idari talimat verme yetkileri bulunmaz. Tüm personel amirlerin verdiği meşru görev emirlerine uymak zorundadır.
+  </div>
+
+  <div class="modern-card card-border-blue" style="padding: 11px 15px; margin-bottom: 9px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-blue">[GÜVENLİK]</span>
+      Guard (Gardiyan) — Kolunda 1 Adet Gri Çizgi
+    </div>
+    En düşük rütbeli güvenlik personelidir. Görevi; Wanted/Hostile olan mahkûmların tablet aracılığıyla suç geçmişine bakıp cezasını kesmektir. Hiyerarşiye göre çavuş ve yüzbaşılarını dinlemek zorundadır; emre itaatsizlik görevden ihraç sebebidir. Müdürün düzenlediği toplantılara katılım mecburidir.
+  </div>
+
+  <div class="modern-card card-border-blue" style="padding: 11px 15px; margin-bottom: 9px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-blue">[AMİRLİK]</span>
+      Sergeant (Çavuş) — Kolunda 3 Adet Gri Çizgi
+    </div>
+    Orta rütbeli güvenlik amiridir. Görevleri; gardiyanların görevlerini iyi yapıp yapmadığını denetlemek, intizamı sağlamak ve zor durumlarda gardiyanlara yardımcı olmaktır. Yüzbaşıdan emir alır, gardiyanlara emir verebilir; toplantılara katılmak zorundadır.
+  </div>
+
+  <div class="modern-card card-border-amber" style="padding: 11px 15px; margin-bottom: 9px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-amber">[BAŞAMİR]</span>
+      Captain (Yüzbaşı) — Kolunda Altın Sarısı Dikdörtgen
+    </div>
+    En yüksek rütbeli güvenlik personelidir. Hapishanedeki güvenliği genel denetler, gardiyan ve çavuşlara emir vererek düzeni sağlar. Doğrudan Müdürden emir alır; Bodyguard'dan emir almaz, toplantılara katılır.<br>
+    <strong style="color: #991b1b;">Silah Taşıma Yetkisi:</strong> <strong>Ateşli silahı olan TEK güvenlik personelidir.</strong> Silahı en tehlikeli durumlar haricinde veya eğlence amaçlı kullanmak derhal görevden ihraç ve ağır ban sebebidir!
+  </div>
+
+  <div class="modern-card card-border-amber" style="padding: 11px 15px; margin-bottom: 9px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-amber">[KORUMA]</span>
+      Bodyguard (Müdür Koruması) — Yakın Koruma Ekibi
+    </div>
+    Müdürün bizzat yanında duran korumalarıdır. Yalnızca Müdürden emir alır; kimseye emir veremez. Mahkûmlar veya gardiyanlar üzerinde hiçbir idari veya cezai yetkisi yoktur. Müdür izin vermedikçe yanından ayrılamaz; çağırdığında derhal yanına gelmelidir. Toplantıların denetimini ve güvenliğini sağlar.<br>
+    <strong style="color: #991b1b;">Silah Kuralı:</strong> Silahını en tehlikeli durumlar haricinde, Müdürü korumak dışında kesinlikle kullanamaz ve kimseye doğrultamaz. Keyfi silah çekmek derhal görevden ihraç ve ban sebebidir.
+  </div>
+
+  <div class="modern-card card-border-crimson" style="padding: 11px 15px; margin-bottom: 9px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-crimson">[EN ÜST MAKAMI]</span>
+      Warden (Cezaevi Müdürü) — En Yetkili Mülki Amir
+    </div>
+    Hapishanedeki en yetkili kişidir ve tüm birimlerin işleyişinden sorumludur. Çalışanların görevlerini yapıp yapmadığını denetler, güvenliği sağlar. Mahkûmlar için sayım başlatıp sayım esnasında üst arayabilir. Güvenlik personeli için toplantılar düzenleyip görev dağıtır. Görevini kötüye kullanırsa isyan başlatılabilir veya devlet tarafından ihraç edilir.
+  </div>
+
+  <div class="modern-card card-border-slate" style="padding: 11px 15px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-dark">[MÜDÜR DİREKTİFİ]</span>
+      Cezaevi Müdürü Bağlayıcı Kuralları (Warden Protocol)
+    </div>
+    <strong>Kötü Müdür Rolü Yasaktır:</strong> Müdürler gardiyan veya mahkûmlara keyfi ayrımcılık yapamaz; kötü müdür rolü kabul edilmez.<br>
+    <strong>Haksız İşten Atma Yasağı:</strong> Durduk yere, geçerli rol gerekçesi olmaksızın kimse işten atılamaz.<br>
+    <strong>Ateş Etme Yasağı:</strong> Bir personele veya sebepsiz yere mahkûma kesinlikle ateş açılamaz (Katiyen gardiyana sıkılamaz).<br>
+    <strong>Makam Odası Güvenliği:</strong> Odasına giren bir kişiden rahatsızsa korumalardan rica ederek silahsız şekilde dışarı çıkarttırır.<br>
+    <strong>Yetki Taslama Yasağı:</strong> Müdür olmadığı halde hiç kimse "Ben müdürüm" diyemez. İzinsiz etkinlik veya organizasyon yapılamaz.
+  </div>
+        </div>
+      </section>
+
+      <section class="doc-section" id="nobet-telsiz-isyan" aria-labelledby="heading-nobet-telsiz-isyan">
+        <div class="sec-head">
+          <span class="sec-eyebrow">Bölüm 4</span>
+          <h2 id="heading-nobet-telsiz-isyan">4. Nöbet Esasları, Telsiz ve İsyan Protokolü</h2>
+          <p class="sec-desc">Nöbet bölgesi disiplini, 3 saniye telsiz kuralı, Taser önceliği ve Kod Kırmızı prosedürü.</p>
+        </div>
+        <div class="sec-body">
+          <div class="modern-card card-border-slate" style="padding: 12px 16px; margin-bottom: 11px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-dark">[NÖBET DÜZENİ]</span>
+      Genel Güvenlik ve Nöbet Esasları
+    </div>
+    <div class="item-list" style="gap: 6.5px;">
+      <div class="list-row">
+        <span class="bullet-dot">•</span>
+        <span class="row-title">Madde 1.1 (Bölge Sadakati):</span>
+        <span class="row-text">Her gardiyan, tayin edildiği nöbet bölgesini (koğuş koridorları, avlu, yemekhane ve tecrit alanları) hiçbir suretle terk edemez. Devriye saatleri harfiyen uygulanacaktır.</span>
+      </div>
+      <div class="list-row">
+        <span class="bullet-dot">•</span>
+        <span class="row-title">Madde 1.2 (Telsiz Disiplini):</span>
+        <span class="row-text">Telsizler sürekli açık, yüksek ses seviyesinde ve operasyonel frekansa ayarlı tutulacaktır. Telsiz çağrılarına anında (en geç 3 saniye içinde) yanıt verilmesi zorunludur.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modern-card card-border-blue" style="padding: 12px 16px; margin-bottom: 11px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-blue">[DİSİPLİN REJİMİ]</span>
+      Mahkûm İletişimi ve Disiplin Politikası
+    </div>
+    <div class="item-list" style="gap: 6.5px;">
+      <div class="list-row">
+        <span class="bullet-dot">•</span>
+        <span class="row-title">Madde 2.1 (Menfaat Yasağı):</span>
+        <span class="row-text">Mahkûmlarla görev kapsamı dışındaki konularda samimiyet kurulamaz; mahkûmlardan hediye, tütün, para veya herhangi bir menfaat kabul edilemez.</span>
+      </div>
+      <div class="list-row">
+        <span class="bullet-dot">•</span>
+        <span class="row-title">Madde 2.2 (Resmi Hitap):</span>
+        <span class="row-text">Mahkûmlara yönelik hitaplar resmi ve mesafeli olacaktır. Hakaret, küfür, psikolojik baskı veya fiziksel şiddet (zorunlu orantılı müdahale hariç) katiyen yasaktır.</span>
+      </div>
+      <div class="list-row">
+        <span class="bullet-dot">•</span>
+        <span class="row-title">Madde 2.3 (Arama ve Zapt):</span>
+        <span class="row-text">Hücre aramalarında ve üst yoklamalarında tarafsızlık esastır; ele geçirilen yasaklı maddeler (kesici alet, demir alet vb.) derhal tutanakla merkeze teslim edilir ve personele iade edilmez.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modern-card card-border-crimson" style="padding: 12px 16px; margin-bottom: 11px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-crimson">[MÜDAHALE ÖNCELİĞİ]</span>
+      Müdahale ve Taser Önceliği Kuralı
+    </div>
+    Bir şüpheliyi veya kaçan şahsı kovalarken <strong style="color: #991b1b;">öncelik kesinlikle TASER'dır; taser kullanımı zorunludur.</strong> Taser kullanmadan doğrudan ateşli silaha sarılmak veya gereksiz yere öldürücü müdahalede bulunmak kesinlikle yasaktır ve görevden ihraç sebebidir.
+  </div>
+
+  <div class="modern-card card-border-amber" style="padding: 12px 16px; margin-bottom: 11px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-amber">[KOD KIRMIZI]</span>
+      Acil Durum ve İsyan Protokolü (Emergency Protocol)
+    </div>
+    <div class="item-list" style="gap: 6.5px;">
+      <div class="list-row">
+        <span class="bullet-dot">•</span>
+        <span class="row-title">Madde 3.1 (Alarm ve İntikal):</span>
+        <span class="row-text">Herhangi bir isyan, toplu kavga, firar girişimi veya rehin alma durumunda ilgili personel anında <strong>"Kod Kırmızı"</strong> alarmı verecek ve en yakın destek ekibi olay yerine intikal edecektir.</span>
+      </div>
+      <div class="list-row">
+        <span class="bullet-dot">•</span>
+        <span class="row-title">Madde 3.2 (Emir Komuta):</span>
+        <span class="row-text">Acil durumlarda müdahale edilirken kıdemli gardiyanın, Yüzbaşının veya Müdürün talimatları dışına çıkılamaz; bireysel ve fevri hareketlerden kesinlikle kaçınılacaktır.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modern-card card-border-emerald" style="padding: 12px 16px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-emerald">[İNTİZAM KODU]</span>
+      Güvenlik Personeli Toplantı ve İntizam Esasları (Briefing Code)
+    </div>
+    Cezaevi Müdürü tarafından ilan edilen tüm personel toplantılarına katılmak zorunludur. Geçerli bir mazeret sunmaksızın toplantıya katılmayan personel görevden ihraç edilir.
+  </div>
+
+  <div class="modern-card card-border-slate">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-dark">[GÜVENLİK ESASI]</span>
+      Hücre Arama, Müsadere ve Silah Güvenliği Protokolü
+    </div>
+    Cezaevi aramalarında ele geçirilen kesici aletler, demir malzemeler ve kaçak maddeler tutanakla derhal idareye teslim edilir, mahkûma kesinlikle iade edilmez. Personelin durduk yere mahkûma veya diğer meslektaşlarına ateş açması (Friendly Fire) katiyen yasaktır; ihlal anında görevden ihraç edilir.
+  </div>
+        </div>
+      </section>
+
+      <section class="doc-section" id="ihlal-ve-ticket" aria-labelledby="heading-ihlal-ve-ticket">
+        <div class="sec-head">
+          <span class="sec-eyebrow">Bölüm 5</span>
+          <h2 id="heading-ihlal-ve-ticket">5. Sık Karşılaşılan İhlaller ve Yetkili Yaptırımları</h2>
+          <p class="sec-desc">Oyun içi sık ihlaller özeti, destek ticket kanıt kuralları ve 15 dakika devralma kuralı.</p>
+        </div>
+        <div class="sec-body">
+          <table class="table-official">
+    <thead>
+      <tr>
+        <th style="width: 38%;">İHLAL VE HATA TANIMI</th>
+        <th style="width: 62%;">UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-white">
+        <td data-label="İHLAL VE HATA TANIMI"><strong>Sebepsiz Saldırı ve Öldürme (Freekill / RDM)</strong></td>
+        <td data-label="UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ">Bildirim <span class="red-pill">(Notify)</span> → Uyarı <span class="red-pill">(Warn)</span> → Sunucudan Atma <span class="red-pill">(Kick)</span> → 12 Saat ila 3 Gün Yasaklama <span class="red-pill">(Ban)</span></td>
+      </tr>
+      <tr class="row-rose-light">
+        <td data-label="İHLAL VE HATA TANIMI"><strong>Toplu Hatalı Rol & Sabotaj (Mass FRP / Troll RP)</strong></td>
+        <td data-label="UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ">Ağır ihlal: Doğrudan 3 Günlük ila Kalıcı Yasaklama <span class="red-pill">(Ban)</span></td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="İHLAL VE HATA TANIMI"><strong>Sahneden / Cezadan Kaçma (Combat Logging)</strong></td>
+        <td data-label="UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ">Uyarı <span class="red-pill">(Warn)</span> → 12 Saatlik Yasaklama <span class="red-pill">(Ban)</span> → 3 Günlük Yasaklama <span class="red-pill">(Ban)</span></td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="İHLAL VE HATA TANIMI"><strong>Oyuncuya Hakaret ve Saygısızlık</strong></td>
+        <td data-label="UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ">Bildirim <span class="red-pill">(Notify)</span> → Uyarı <span class="red-pill">(Warn)</span> → Sunucudan Atma <span class="red-pill">(Kick)</span> → 12 Saatlik Yasaklama <span class="red-pill">(Ban)</span></td>
+      </tr>
+      <tr class="row-rose-medium">
+        <td data-label="İHLAL VE HATA TANIMI"><strong>Ailevi Değerlere Küfür (ADK)</strong></td>
+        <td data-label="UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ">Ağırlığına göre doğrudan 7 Günlük Yasaklama <span class="red-pill">(Ban)</span> ila Kalıcı Yasaklama <span class="red-pill">(Ban)</span></td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="İHLAL VE HATA TANIMI"><strong>Kolluk Kışkırtma (Cop Bait) & Bunny Hop</strong></td>
+        <td data-label="UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ">Bildirim <span class="red-pill">(Notify)</span> → Uyarı <span class="red-pill">(Warn)</span> → Sunucudan Atma <span class="red-pill">(Kick)</span> → 12 Saatlik Yasaklama <span class="red-pill">(Ban)</span></td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="İHLAL VE HATA TANIMI"><strong>Oyun Açığı İstismarı (Usebug / Exploit)</strong></td>
+        <td data-label="UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ">Uyarı <span class="red-pill">(Warn)</span> → 1 Günlük Yasaklama <span class="red-pill">(Ban)</span> → 7 Günlük Yasaklama <span class="red-pill">(Ban)</span> → Kalıcı Yasaklama <span class="red-pill">(Ban)</span></td>
+      </tr>
+      <tr class="row-rose-light">
+        <td data-label="İHLAL VE HATA TANIMI"><strong>Robux ile Eşya / Para Satışı (Cross-Trading)</strong></td>
+        <td data-label="UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ">İlk sefer: 7 Günlük Yasaklama <span class="red-pill">(Ban)</span> → Tekrarı: Kalıcı Yasaklama <span class="red-pill">(Ban)</span></td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="İHLAL VE HATA TANIMI"><strong>Flört ve Cinsel İçerikli Rol (ERP / 18+)</strong></td>
+        <td data-label="UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ">Hafif durum: Sunucudan Atma <span class="red-pill">(Kick)</span> → Ciddi / Tekrar: 3 Günlük ila Kalıcı Yasaklama <span class="red-pill">(Ban)</span></td>
+      </tr>
+      <tr class="row-rose-light">
+        <td data-label="İHLAL VE HATA TANIMI"><strong>Yetkili Taklidi (Staff Impersonation)</strong></td>
+        <td data-label="UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ">Abartı değilse: 7 Günlük Yasaklama <span class="red-pill">(Ban)</span> → Abartı ise: Kalıcı Yasaklama <span class="red-pill">(Permaban)</span></td>
+      </tr>
+      <tr class="row-white">
+        <td data-label="İHLAL VE HATA TANIMI"><strong>Ses Kirliliği / Earrape / Soundboard</strong></td>
+        <td data-label="UYGULANACAK YAPTIRIM VE CEZA DİZİLİMİ">Uyarı <span class="red-pill">(Warn)</span> → Sunucudan Atma <span class="red-pill">(Kick)</span> → 1 Gün ila 7 Gün Yasaklama <span class="red-pill">(Ban)</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="modern-card card-border-blue" style="padding: 12px 16px; margin-bottom: 10px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-blue">[DESTEK PROTOKOLÜ]</span>
+      Destek Talebi (Ticket) ve Video Kanıt Şartı (Proof Policy)
+    </div>
+    Oyun içi ihlalleri Discord destek kanallarından yetkili ekibine bildirirken <strong>Medal.tv veya video ekran kaydı sunulması zorunludur.</strong> Olay öncesini göstermeyen kırpılmış kayıtlar reddedilir. Destek taleplerinde dürüst ve saygılı tutum esastır.
+  </div>
+
+  <div class="modern-card card-border-crimson" style="padding: 12px 16px;">
+    <div class="card-header-badge">
+      <span class="badge-tag tag-crimson">[15 DAKİKA KURALI]</span>
+      Ticket Devralma ve İşlem Süresi Kuralı
+    </div>
+    Bir yetkili destek talebini üzerine aldıktan sonra <strong>15 dakika boyunca</strong> ilgilenmez veya işlem yapmazsa, diğer yetkililer bileti devralma hakkına sahiptir. Destek talebinin sahipsiz kalması önlenir.
+  </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <span>Prison RP Türkiye — Resmi Oyun Kuralları ve Cezaevi Yönetmeliği</span>
+        <span>
+          <a href="./downloads/Prison_RP_Resmi_Oyun_Kurallari.pdf" download>Kurallar PDF İndir</a>
+          ·
+          <a href="./yetkili/">Yetkili Rehberi</a>
+        </span>
+      </footer>
+    </main>
+  </div>
+
+  <button id="scroll-top-btn" class="scroll-top-btn" type="button" aria-label="Yukarı çık">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <script>
+
+(function () {
+  const sidebar = document.getElementById('sidebar');
+  const backdrop = document.getElementById('drawer-backdrop');
+  const openBtn = document.getElementById('menu-toggle');
+  const closeBtn = document.getElementById('drawer-close');
+  let lastFocus = null;
+
+  function setDrawer(open) {
+    if (!sidebar || !backdrop) return;
+    sidebar.classList.toggle('is-open', open);
+    backdrop.classList.toggle('is-open', open);
+    document.body.classList.toggle('drawer-locked', open);
+    if (openBtn) openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) {
+      lastFocus = document.activeElement;
+      if (closeBtn) closeBtn.focus();
+    } else if (lastFocus && typeof lastFocus.focus === 'function') {
+      lastFocus.focus();
+      lastFocus = null;
+    }
+  }
+
+  if (openBtn) openBtn.addEventListener('click', () => setDrawer(true));
+  if (closeBtn) closeBtn.addEventListener('click', () => setDrawer(false));
+  if (backdrop) backdrop.addEventListener('click', () => setDrawer(false));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar && sidebar.classList.contains('is-open')) {
+      setDrawer(false);
+    }
+    if (e.key === '/' && document.activeElement && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
+      const searchEl = document.getElementById('doc-search');
+      if (searchEl) {
+        e.preventDefault();
+        searchEl.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        searchEl.focus({ preventScroll: true });
+      }
+    }
+  });
+
+  document.querySelectorAll('.toc-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 960) setDrawer(false);
+    });
+  });
+
+  // Scroll spy
+  const sections = Array.from(document.querySelectorAll('.doc-section'));
+  const tocLinks = Array.from(document.querySelectorAll('.toc-link'));
+  if (sections.length && tocLinks.length && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          tocLinks.forEach((a) => {
+            const match = a.getAttribute('href') === '#' + id;
+            a.classList.toggle('is-active', match);
+          });
+        }
+      });
+    }, { rootMargin: '-80px 0px -65% 0px', threshold: 0 });
+    sections.forEach((sec) => observer.observe(sec));
+  }
+
+  // Turkish + ASCII-fold normalization for search
+  function normTr(str) {
+    return (str || '')
+      .toLocaleLowerCase('tr-TR')
+      .replace(/ç/g, 'c')
+      .replace(/ğ/g, 'g')
+      .replace(/ı/g, 'i')
+      .replace(/i̇/g, 'i')
+      .replace(/ö/g, 'o')
+      .replace(/ş/g, 's')
+      .replace(/ü/g, 'u')
+      .trim();
+  }
+
+  const searchInput = document.getElementById('doc-search');
+  const clearBtn = document.getElementById('search-clear');
+  const statusEl = document.getElementById('search-status');
+  const emptyEl = document.getElementById('search-empty');
+  const resetEmptyBtn = document.getElementById('reset-search-btn');
+
+  // Tag searchable items dynamically
+  const searchableSelector = '.modern-card, .tool-card, .role-box, table tbody tr, .rule-card, .directive-box, .protocol-box, .harmful-box, .notice-card';
+  const items = Array.from(document.querySelectorAll(searchableSelector));
+  items.forEach((el) => {
+    el.dataset.searchText = normTr(el.textContent);
+  });
+
+  function applySearch() {
+    if (!searchInput) return;
+    const raw = searchInput.value;
+    const q = normTr(raw);
+    if (clearBtn) clearBtn.hidden = raw.length === 0;
+
+    let visibleCount = 0;
+    if (!q) {
+      items.forEach((el) => el.classList.remove('search-hidden'));
+      document.querySelectorAll('.doc-section, .table-wrap, .tools-grid, .roles-grid, .cards-container, .sub-section-label').forEach((w) => {
+        w.classList.remove('search-hidden');
+      });
+      if (statusEl) statusEl.textContent = '';
+      if (emptyEl) emptyEl.hidden = true;
+      return;
+    }
+
+    const tokens = q.split(/\s+/).filter(Boolean);
+    items.forEach((el) => {
+      const hay = el.dataset.searchText || '';
+      const hit = tokens.every((t) => hay.includes(t));
+      el.classList.toggle('search-hidden', !hit);
+      if (hit) visibleCount++;
+    });
+
+    // Hide empty table wraps, grids, sections
+    document.querySelectorAll('.table-wrap').forEach((tw) => {
+      const hasRow = tw.querySelector('tbody tr:not(.search-hidden)');
+      tw.classList.toggle('search-hidden', !hasRow);
+    });
+    document.querySelectorAll('.tools-grid, .roles-grid, .cards-container').forEach((g) => {
+      const hasChild = Array.from(g.children).some((c) => !c.classList.contains('search-hidden'));
+      g.classList.toggle('search-hidden', !hasChild);
+    });
+    document.querySelectorAll('.doc-section').forEach((sec) => {
+      const hasVisible = sec.querySelector(
+        '.modern-card:not(.search-hidden), .tool-card:not(.search-hidden), .role-box:not(.search-hidden), table tbody tr:not(.search-hidden), .rule-card:not(.search-hidden), .directive-box:not(.search-hidden), .protocol-box:not(.search-hidden), .harmful-box:not(.search-hidden), .notice-card:not(.search-hidden)'
+      );
+      sec.classList.toggle('search-hidden', !hasVisible);
+    });
+    document.querySelectorAll('.sub-section-label').forEach((lbl) => {
+      lbl.classList.add('search-hidden');
+    });
+
+    if (statusEl) {
+      statusEl.textContent = visibleCount > 0 ? visibleCount + ' kayıt eşleşti' : 'Sonuç yok';
+    }
+    if (emptyEl) emptyEl.hidden = visibleCount > 0;
+  }
+
+  if (searchInput) searchInput.addEventListener('input', applySearch);
+  if (clearBtn) clearBtn.addEventListener('click', () => { searchInput.value = ''; applySearch(); searchInput.focus(); });
+  if (resetEmptyBtn) resetEmptyBtn.addEventListener('click', () => { searchInput.value = ''; applySearch(); searchInput.focus(); });
+
+  // Wrap tables safely for progressive styling
+  document.querySelectorAll('table').forEach((tbl) => {
+    if (!tbl.parentElement.classList.contains('table-wrap')) {
+      const wrap = document.createElement('div');
+      wrap.className = 'table-wrap';
+      tbl.parentNode.insertBefore(wrap, tbl);
+      wrap.appendChild(tbl);
+    }
+  });
+
+  // Back to top button
+  const topBtn = document.getElementById('scroll-top-btn');
+  if (topBtn) {
+    window.addEventListener('scroll', () => {
+      topBtn.classList.toggle('is-visible', window.scrollY > 380);
+    }, { passive: true });
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+
+  </script>
+</body>
+</html>
